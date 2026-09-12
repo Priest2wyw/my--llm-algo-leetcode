@@ -2,7 +2,7 @@
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
-**Goal:** Download the current Task0/Task1 learning material into stable task folders and provide a repeatable manifest-driven downloader for future tasks.
+**Goal:** Keep only assignment notebooks that require local computation in stable task folders, document reading-only materials as upstream links, and provide a repeatable manifest-driven downloader for future tasks.
 
 **Architecture:** A JSON manifest is the single source of truth for upstream URLs and local paths. A standard-library Python script reads that manifest, downloads files atomically, and validates notebooks as non-empty JSON documents. A small unittest suite covers manifest shape and validation without requiring network access.
 
@@ -27,7 +27,7 @@
 
 - [ ] **Step 3: Add all current Task0/Task1 source mappings**
 
-  Include the three Task0 notebooks, Task0's linked reference markdown, the four Task1 core notebooks, four Task1 extension notebooks, and Task1's linked reference markdown. Preserve upstream filenames and map them into `task0/notebooks`, `task0/references`, `task1/notebooks`, and `task1/references`.
+  Include only Task0 notebooks 17/18 and Task1's four core notebooks. Put all other reading material in the task README files as upstream links, preserving source filenames for local notebooks.
 
 ### Task 2: Implement the reusable downloader
 
@@ -41,7 +41,7 @@
 
 - [ ] **Step 2: Implement atomic downloads and command-line modes**
 
-  Add a default download mode plus `--check` (validate all local files without network) and `--manifest PATH`. Create parent directories, write to a sibling temporary file, replace the destination only after a successful response, and fail with a useful file-specific error.
+  Add a default download mode plus `--check`, `--force`, and `--manifest PATH`. Default mode validates and skips existing files so homework is not overwritten; `--force` explicitly refreshes a file. Create parent directories, write to a sibling temporary file, replace the destination only after a successful response, and fail with a useful file-specific error.
 
 - [ ] **Step 3: Run the unit tests to verify the implementation**
 
@@ -52,15 +52,15 @@
 
 **Files:**
 - Create: `task0/notebooks/*.ipynb`
-- Create: `task0/references/02_training_memory_pressure.md`
+- Create: `task0/README.md`
 - Create: `task1/notebooks/*.ipynb`
-- Create: `task1/references/01_vram_ledger_and_metrics.md`
+- Create: `task1/README.md`
 - Modify: `README.md`
 
 - [ ] **Step 1: Run the manifest-driven downloader**
 
   Run: `python scripts/download_tasks.py`
-  Expected: every manifest entry reports a downloaded file and exits with status 0.
+  Expected: missing manifest entries download, existing homework files are skipped, and the command exits with status 0.
 
 - [ ] **Step 2: Run offline structural validation**
 

@@ -17,13 +17,13 @@
 Task0 和 Task1 的学习 notebook 已按任务下载到当前仓库，下载内容保留上游原始文件名，完成作业后可以直接在这里修改并提交：
 
 ```text
-task0/notebooks/       # Task0 的 3 个核心 notebook
-task0/references/      # Task0 配套说明
-task1/notebooks/       # Task1 的 4 个必做 + 4 个扩展 notebook
-task1/references/      # Task1 配套说明
+task0/README.md        # issue、原文阅读材料、要求和作业回答
+task0/notebooks/       # 仅存放需要本地完成的 17、18
+task1/README.md        # issue、原文阅读材料、要求和作业回答
+task1/notebooks/       # 仅存放需要本地完成的 4 个核心 notebook
 ```
 
-下载清单在 `downloads/task_manifest.json`，可重复执行的下载和校验脚本在 `scripts/download_tasks.py`。后续发布新的 task 时，只需要把新的上游文件加入清单，再运行：
+各 task README 中的参考资料保留上游原始链接，阅读时以原文为准；只有需要计算或提交作业的 notebook 才下载到本地。下载清单在 `downloads/task_manifest.json`，可重复执行的下载和校验脚本在 `scripts/download_tasks.py`。后续发布新的 task 时，只需要在对应 README 中标明本地修改范围，并把需要本地运行的文件加入清单，再运行：
 
 ```bash
 # 下载或更新清单中的所有文件
@@ -31,4 +31,9 @@ python scripts/download_tasks.py
 
 # 不访问网络，只检查本地文件和 notebook JSON 结构
 python scripts/download_tasks.py --check
+
+# 明确要求用上游版本覆盖本地文件（会覆盖作业修改，谨慎使用）
+python scripts/download_tasks.py --force
 ```
+
+默认下载命令会跳过已经存在的本地文件，避免后续更新清单时覆盖作业答案；只有显式使用 `--force` 才会覆盖。

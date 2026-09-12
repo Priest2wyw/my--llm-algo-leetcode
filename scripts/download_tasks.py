@@ -87,10 +87,14 @@ def _destination(entry: dict[str, str]) -> Path:
     return destination
 
 
-def download_entry(entry: dict[str, str]) -> Path:
-    """Download one manifest entry and replace its destination atomically."""
+def download_entry(entry: dict[str, str], *, force: bool = False) -> Path:
+    """Download one entry, preserving existing homework unless forced."""
     destination = _destination(entry)
     destination.parent.mkdir(parents=True, exist_ok=True)
+    if destination.exists() and not force:
+        validate_local_file(destination, entry["kind"])
+        return destination
+
     request = Request(entry["url"], headers={"User-Agent": "llm-algo-leetcode-task-downloader/1"})
     try:
         with urlopen(request, timeout=60) as response:
@@ -125,6 +129,7 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--manifest", type=Path, default=DEFAULT_MANIFEST)
     parser.add_argument("--check", action="store_true", help="validate existing files without downloading")
+    parser.add_argument("--force", action="store_true", help="replace existing local files")
     args = parser.parse_args()
 
     entries = load_manifest(args.manifest)
@@ -134,8 +139,9 @@ def main() -> int:
             validate_local_file(destination, entry["kind"])
             print(f"OK   {entry['path']}")
         else:
-            download_entry(entry)
-            print(f"GET  {entry['path']}")
+            existed = destination.exists() and not args.force
+            download_entry(entry, force=args.force)
+            print(f"SKIP {entry['path']} (already exists)" if existed else f"GET  {entry['path']}")
     print(f"Validated {len(entries)} manifest entries") if args.check else print(f"Downloaded {len(entries)} manifest entries")
     return 0
 
