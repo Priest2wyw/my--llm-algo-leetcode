@@ -1,0 +1,13 @@
+# 任务描述
+
+学习计划：
+我们此次学习本专题研究训练和推理中的显存对象、生命周期与预算取舍，最终通过固定 workload、真实 GPU 测量和 profiling 形成可复现的优化决策。它不是单独讲某个技巧，而是回答四个问题：显存被什么占用、压力出现在哪个阶段、优化把代价转移到了哪里、当前方案是否值得采用。训练侧重点是参数、梯度、optimizer state、activation 和临时张量；推理侧重点是权重、KV Cache、请求并发和临时 attention 空间。两者共享 dtype、内存层级、带宽和 profiling 基础，但项目证据不能混用。具体的学习计划正在讨论优化中，后续会发布~
+
+原始项目：<https://github.com/datawhalechina/llm-algo-leetcode>>
+
+
+## 任务列表：
+整体任务已经拆分成了6个TASK, 路径为：
+![Image](https://private-user-images.githubusercontent.com/252566641/650240993-0f142b83-8a53-417b-8105-50fa71527476.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3ODkyMDEzMjQsIm5iZiI6MTc4OTIwMTAyNCwicGF0aCI6Ii8yNTI1NjY2NDEvNjUwMjQwOTkzLTBmMTQyYjgzLThhNTMtNDE3Yi04MTA1LTUwZmE3MTUyNzQ3Ni5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjYwOTEyJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI2MDkxMlQwODE3MDRaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0wZTE1ZGJjMTMwNTMzMWU3ZGM1ZTU5MzdiZTdhZTliMThhZDgyMWFhNjhlNzdkZGQzZjlkMjRlMzlkMTYyYTIwJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZyZXNwb25zZS1jb250ZW50LXR5cGU9aW1hZ2UlMkZwbmcifQ.KeUqjz8QLEry8uX6c7DFIeVfCmyzHnV0Me7pS01glfQ)
+- [ ] TASK0：显存生命周期 https://github.com/datawhalechina/llm-algo-leetcode/issues/148
+- [ ] TASK1：硬件与显存账本  https://github.com/datawhalechina/llm-algo-leetcode/issues/149
