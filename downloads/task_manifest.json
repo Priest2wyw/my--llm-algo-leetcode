@@ -1,0 +1,74 @@
+[
+  {
+    "task": "task0",
+    "kind": "notebook",
+    "url": "https://raw.githubusercontent.com/datawhalechina/llm-algo-leetcode/main/00_Prerequisites/07_PyTorch_Autograd_and_Backward.ipynb",
+    "path": "task0/notebooks/07_PyTorch_Autograd_and_Backward.ipynb"
+  },
+  {
+    "task": "task0",
+    "kind": "notebook",
+    "url": "https://raw.githubusercontent.com/datawhalechina/llm-algo-leetcode/main/02_PyTorch_Algorithms/17_Autograd_Basics.ipynb",
+    "path": "task0/notebooks/17_Autograd_Basics.ipynb"
+  },
+  {
+    "task": "task0",
+    "kind": "notebook",
+    "url": "https://raw.githubusercontent.com/datawhalechina/llm-algo-leetcode/main/02_PyTorch_Algorithms/18_Activation_and_Loss_Backward.ipynb",
+    "path": "task0/notebooks/18_Activation_and_Loss_Backward.ipynb"
+  },
+  {
+    "task": "task0",
+    "kind": "reference",
+    "url": "https://raw.githubusercontent.com/datawhalechina/llm-algo-leetcode/main/topic_discussion/memory_performance_tuning/02_training_memory_pressure.md",
+    "path": "task0/references/02_training_memory_pressure.md"
+  },
+  {
+    "task": "task1",
+    "kind": "notebook",
+    "url": "https://raw.githubusercontent.com/datawhalechina/llm-algo-leetcode/main/01_Hardware_Math_and_Systems/01_Data_Types_and_Precision.ipynb",
+    "path": "task1/notebooks/01_Data_Types_and_Precision.ipynb"
+  },
+  {
+    "task": "task1",
+    "kind": "notebook",
+    "url": "https://raw.githubusercontent.com/datawhalechina/llm-algo-leetcode/main/01_Hardware_Math_and_Systems/02_LLM_Params_and_FLOPs.ipynb",
+    "path": "task1/notebooks/02_LLM_Params_and_FLOPs.ipynb"
+  },
+  {
+    "task": "task1",
+    "kind": "notebook",
+    "url": "https://raw.githubusercontent.com/datawhalechina/llm-algo-leetcode/main/01_Hardware_Math_and_Systems/03_GPU_Architecture_and_Memory.ipynb",
+    "path": "task1/notebooks/03_GPU_Architecture_and_Memory.ipynb"
+  },
+  {
+    "task": "task1",
+    "kind": "notebook",
+    "url": "https://raw.githubusercontent.com/datawhalechina/llm-algo-leetcode/main/01_Hardware_Math_and_Systems/06_VRAM_Calculation_and_ZeRO.ipynb",
+    "path": "task1/notebooks/06_VRAM_Calculation_and_ZeRO.ipynb"
+  },
+  {
+    "task": "task1",
+    "kind": "notebook",
+    "url": "https://raw.githubusercontent.com/datawhalechina/llm-algo-leetcode/main/02_PyTorch_Algorithms/04_Attention_MHA_GQA.ipynb",
+    "path": "task1/notebooks/04_Attention_MHA_GQA.ipynb"
+  },
+  {
+    "task": "task1",
+    "kind": "notebook",
+    "url": "https://raw.githubusercontent.com/datawhalechina/llm-algo-leetcode/main/01_Hardware_Math_and_Systems/12_TensorCore_and_Mixed_Precision.ipynb",
+    "path": "task1/notebooks/12_TensorCore_and_Mixed_Precision.ipynb"
+  },
+  {
+    "task": "task1",
+    "kind": "notebook",
+    "url": "https://raw.githubusercontent.com/datawhalechina/llm-algo-leetcode/main/01_Hardware_Math_and_Systems/14_FlashAttention_Memory_Model.ipynb",
+    "path": "task1/notebooks/14_FlashAttention_Memory_Model.ipynb"
+  },
+  {
+    "task": "task1",
+    "kind": "reference",
+    "url": "https://raw.githubusercontent.com/datawhalechina/llm-algo-leetcode/main/topic_discussion/memory_performance_tuning/01_vram_ledger_and_metrics.md",
+    "path": "task1/references/01_vram_ledger_and_metrics.md"
+  }
+]

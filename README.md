@@ -11,3 +11,24 @@
 ![Image](https://private-user-images.githubusercontent.com/252566641/650240993-0f142b83-8a53-417b-8105-50fa71527476.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3ODkyMDEzMjQsIm5iZiI6MTc4OTIwMTAyNCwicGF0aCI6Ii8yNTI1NjY2NDEvNjUwMjQwOTkzLTBmMTQyYjgzLThhNTMtNDE3Yi04MTA1LTUwZmE3MTUyNzQ3Ni5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjYwOTEyJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI2MDkxMlQwODE3MDRaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0wZTE1ZGJjMTMwNTMzMWU3ZGM1ZTU5MzdiZTdhZTliMThhZDgyMWFhNjhlNzdkZGQzZjlkMjRlMzlkMTYyYTIwJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZyZXNwb25zZS1jb250ZW50LXR5cGU9aW1hZ2UlMkZwbmcifQ.KeUqjz8QLEry8uX6c7DFIeVfCmyzHnV0Me7pS01glfQ)
 - [ ] TASK0：显存生命周期 https://github.com/datawhalechina/llm-algo-leetcode/issues/148
 - [ ] TASK1：硬件与显存账本  https://github.com/datawhalechina/llm-algo-leetcode/issues/149
+
+## 本地学习资料
+
+Task0 和 Task1 的学习 notebook 已按任务下载到当前仓库，下载内容保留上游原始文件名，完成作业后可以直接在这里修改并提交：
+
+```text
+task0/notebooks/       # Task0 的 3 个核心 notebook
+task0/references/      # Task0 配套说明
+task1/notebooks/       # Task1 的 4 个必做 + 4 个扩展 notebook
+task1/references/      # Task1 配套说明
+```
+
+下载清单在 `downloads/task_manifest.json`，可重复执行的下载和校验脚本在 `scripts/download_tasks.py`。后续发布新的 task 时，只需要把新的上游文件加入清单，再运行：
+
+```bash
+# 下载或更新清单中的所有文件
+python scripts/download_tasks.py
+
+# 不访问网络，只检查本地文件和 notebook JSON 结构
+python scripts/download_tasks.py --check
+```
